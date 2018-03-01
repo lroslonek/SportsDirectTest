@@ -1,7 +1,7 @@
 package utils
 
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.chrome.ChromeDriver
 
 import java.util.concurrent.TimeUnit
 
@@ -10,6 +10,7 @@ class DriverFactory {
     private static WebDriver driver;
 
     public DriverFactory() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver")
         initialize()
     }
 
@@ -18,7 +19,7 @@ class DriverFactory {
     }
 
     private static void createNewDriverInstance() {
-        driver = new FirefoxDriver()
+        driver = new ChromeDriver()
         driver.manage().window().maximize()
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
