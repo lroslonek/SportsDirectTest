@@ -15,6 +15,7 @@ dependencies {
     testCompile group: 'org.spockframework', name: 'spock-maven', version: '0.7-groovy-2.0'
     testCompile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.9.1'
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.0.0'
+    testCompile 'junit:junit:[4,)'
 }
 test {
     testLogging {
